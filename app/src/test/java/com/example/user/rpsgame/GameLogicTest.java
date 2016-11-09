@@ -21,7 +21,10 @@ public class GameLogicTest {
 
     @Before
     public void before() {
+        gameLogicRock = new GameLogic("rock");
         gameLogicPaper = new GameLogic("paper");
+        gameLogicScissors = new GameLogic("scissors");
+
     }
 
     @Test
@@ -33,6 +36,20 @@ public class GameLogicTest {
     public void testGetComputerPlayReturnsGoodString() {
         assertTrue(Arrays.asList(mPlays).contains(gameLogicPaper.getComputerPlay()));
     }
+
+//    @Test
+//    public void testGameLogic() {
+//        String computerPlay = gameLogicRock.computerPlay;
+//        if (computerPlay == "rock") {
+//            assertEquals("Draw", gameLogicRock);
+//        }
+//        else if (computerPlay == "scissors") {
+//            assertEquals("Player wins", gameLogicRock);
+//        }
+//        else if (computerPlay == "rock") {
+//            assertEquals("Trump wins \n (... and everybody else loses)", gameLogicRock);
+//        }
+//    }
 
 
 }

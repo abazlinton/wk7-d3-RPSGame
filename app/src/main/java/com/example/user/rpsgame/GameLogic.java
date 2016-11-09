@@ -37,14 +37,14 @@ public class GameLogic {
         returnResult[0] = computerPlay;
 
         if (userPlay == computerPlay) {
-            returnResult[1] = "draw";
+            returnResult[1] = "Draw";
         }
         else if (
                 userPlay == mPairs[0][0] && computerPlay == mPairs[0][1] ||
                         userPlay == mPairs[1][0] && computerPlay == mPairs[1][1] ||
                         userPlay == mPairs[2][0] && computerPlay == mPairs[2][1]
                 ) {
-            returnResult[1] = "user win";
+            returnResult[1] = "Player wins";
         }
 
         else {

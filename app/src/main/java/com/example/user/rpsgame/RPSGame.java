@@ -87,7 +87,8 @@ public class RPSGame extends AppCompatActivity {
 
 
         mTrumpMoveText = "Return Move";
-        String newTrumpMoveText = "Trump move: " + results[0];
+        mTrumpMoveText = results[0].substring(0, 1).toUpperCase() + results[0].substring(1);
+        String newTrumpMoveText = "Trump move: " + mTrumpMoveText;
         mTrumpMoveTextView.setText(newTrumpMoveText);
 
         //Todo: Get result back from Jo
@@ -97,6 +98,11 @@ public class RPSGame extends AppCompatActivity {
 
         if (newResultMoveText.charAt(0) == 'T'){
             mTrump.setImageResource(R.drawable.trump_win);
+            mTrump.setVisibility(View.VISIBLE);
+        }
+
+        if (newResultMoveText.charAt(0) == 'P'){
+            mTrump.setImageResource(R.drawable.sad_trump);
             mTrump.setVisibility(View.VISIBLE);
         }
 
